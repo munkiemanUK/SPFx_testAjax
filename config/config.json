@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "test-ajax-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/testAjax/TestAjaxWebPart.js",
+          "manifest": "./src/webparts/testAjax/TestAjaxWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "https://code.jquery.com/jquery-3.5.1.min.js",
+      "globalName": "jquery"
+    },
+    "bootstrap": {
+      "path": "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": [
+        "jquery"
+      ]
+    }
+  },
+  "localizedResources": {
+    "TestAjaxWebPartStrings": "lib/webparts/testAjax/loc/{locale}.js"
+  }
+}
