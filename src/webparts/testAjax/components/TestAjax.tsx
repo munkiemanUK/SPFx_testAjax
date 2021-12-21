@@ -24,7 +24,7 @@ export interface ITestAjaxState {
 
 export default class TestAjax extends React.Component<ITestAjaxProps, ITestAjaxState,{}> {
 
-  constructor(props) { 
+  constructor(props: Readonly<ITestAjaxProps>) { 
     super(props); 
     this.state = { 
       items: [ 
@@ -57,7 +57,7 @@ export default class TestAjax extends React.Component<ITestAjaxProps, ITestAjaxS
   } 
 
   public _onChange(ev: React.FormEvent<HTMLInputElement>, option: any) { 
-    console.log(option); 
+/*    console.log(option); 
     switch(option){
       case 'Yes':
         questionValue=100;
@@ -67,8 +67,9 @@ export default class TestAjax extends React.Component<ITestAjaxProps, ITestAjaxS
         questionValue=0;
         break;
     }
-    console.log(questionValue);
+    console.log(questionValue);*/
   } 
+
 
   public render(): React.ReactElement<ITestAjaxProps> {
     return (
@@ -109,7 +110,6 @@ export default class TestAjax extends React.Component<ITestAjaxProps, ITestAjaxS
                               text: 'N/A',
                             }
                           ]}
-                          onChange={ this._onChange } 
                           label='' 
                           required={ true }
                         />              
